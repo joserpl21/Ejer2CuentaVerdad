@@ -26,4 +26,14 @@ public class CuentaAhorro extends CuentaCorriente {
         setSaldo(getSaldo() - (getSaldo() * (this.interes / 100)));
     }
 
+    public CuentaAhorro(String nombre, String numCuenta, double saldo, double interes) {
+        super(nombre, numCuenta, saldo, 0);
+        this.interes = interes;
+    }
+
+    public CuentaAhorro(String nombre, String numCuenta, double interes) {
+        super(nombre, numCuenta);
+        this.interes = interes;
+    }
+
 }
