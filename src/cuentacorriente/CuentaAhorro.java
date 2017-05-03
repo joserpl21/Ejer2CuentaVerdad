@@ -11,6 +11,19 @@ package cuentacorriente;
  */
 public class CuentaAhorro extends CuentaCorriente {
 
-   
-    
+    private double interes;
+
+    public CuentaAhorro(String titular, String numCuenta) {
+        super(titular, numCuenta);
+        this.interes = 2.5;
+    }
+
+    public double getInteres() {
+        return this.interes;
+    }
+
+    public void calcularInteres() {
+        setSaldo(getSaldo() - (getSaldo() * (this.interes / 100)));
+    }
+
 }
